@@ -1,0 +1,274 @@
+<html>
+<head>
+<title>blood donation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<h1>Blood Donation</h1>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+  <h3>FIND A DONOR</h3>
+<form>
+
+<label for="state">STATE:</label>
+  <input list="states" name="states">
+<datalist id="states">
+<option value="Andhra Pradesh"> 
+<option value="Arunachal Pradesh">  
+<option value="Assam"> 
+<option value="Bihar">
+<option value="Chhattisgarh">
+<option value="Goa">
+<option value="Gujarat"> 
+<option value="Haryana">
+<option value="Himachal Pradesh"> 
+<option value="Jharkhand">
+<option value="Karnataka"> 
+<option value="Kerala"> 
+<option value="Madhya Pradesh"> 
+<option value="Maharashtra"> 
+<option value="Manipur">
+<option value="Meghalaya"> 
+<option value="Mizoram"> 
+<option value="Nagaland"> 
+<option value="Odisha"> 
+<option value="Punjab"> 
+<option value="Rajasthan"> 
+<option value="Sikkim"> 
+<option value="Tamil Nadu"> 
+<option value="Telangana"> 
+<option value="Tripura"> 
+<option value="Uttar Pradesh"> 
+<option value="Uttarakhand">
+<option value="West Bengal"> 
+</datalist><br>
+
+<label for="city">CITY: </label>
+<input list="city" name="city">
+<datalist id="city">
+<option value="Hyderabad"> 
+<option value="Itanagar"> 
+<option value="Dispur"> 
+<option value="Patna"> 
+<option value="Raipur"> 
+<option value="Panaji"> 
+<option value="Gandhinagar"> 
+<option value="Shimla"> 
+<option value="Chandigarh"> 
+<option value="Srinagar"> 
+<option value="Ranchi"> 
+<option value="Bengaluru"> 
+<option value="Bhopal"> 
+<option value="Mumbai"> 
+<option value="Imphal"> 
+<option value="Shillong"> 
+<option value="Aizwal"> 
+<option value="Chennai"> 
+<option value="Jaipur"> 
+<option value="Lucknow"> 
+<option value="Kolkata"> 
+<option value="Dehradun"> 
+<option value="Agartala"> 
+<option value="Gangtok"> 
+</datalist><br>
+
+<label for="area">AREA:</label>
+<input list="area" name="area">
+<datalist id="area">
+<option value="Town"> 
+<option value="Village"> 
+</datalist><br>
+
+<label for="group">GROUP:</label>
+<input list="group" name="group">
+<datalist id="group">
+<option value="A"> 
+<option value="B"> 
+<option value="AB"> 
+<option value="O">
+</datalist><br>
+<button type="button">search</button>
+</form>
+
+<p><b>Donation process:</b><br>
+Donating blood is a safe, simple, and rewarding experience that usually only takes 45-60 minutes.<br>
+<b><i>Before You Donate</b></i><br>
+To donate blood, find a blood bank near you blood bank locator. Then, call the blood bank to make an appointment. When making the appointment, ask the following questions:<br>
+<ul>
+ <li>What are your general donor requirements? (Most places require you to weigh a minimum of 110 pounds, be at least 16 years old and be generally healthy).</li>
+ <li>What kind of identification is required? (First-time donors are usually asked to present two forms of identification the type of identification needed varies by facility).</li>
+ <li>If you have any particular health concerns or have traveled outside of the country, it also a good idea to inform the blood bank at the time you are making your appointment.</li>
+</ul>
+<b><i>When You Arrive at the Blood Donation Center</b></i>
+<ul>
+ <li>When you sign in, you will be asked to complete a donor registration form, which includes your name, address, phone number, and various other types of demographic information.</li>
+ <li>You will also be asked to show your donor card or the type of identification required by the particular blood bank you visit.</li>
+</ul>
+<b><i>Blood Donation</b></i><br>
+Once the pre-donation screening is finished, you will proceed to a donor bed where your arm will be cleaned with an antiseptic, and a professional will use a blood donation kit to draw blood from a vein in your arm. If you are allergic to iodine, be sure to tell the phlebotomist at this point.
+During the donation process, you will donate one unit of blood; this takes about six to ten minutes.<br>
+<br><b><i>Post-Donation</b></i><br>
+Following your donation, you will receive refreshments in the canteen area, where you can stay until you feel strong enough to leave.
+After donating, it is recommended that you increase your fluid intake for the next 24 to 48 hours; avoid strenuous physical exertion, heavy lifting or pulling with the donation arm for about five hours; and eat well balanced meals for the next 24 hours. After donating, smoking and alcohol consumption is not recommended
+Although donors seldom experience discomfort after donating, if you feel light-headed, lie down until the feeling passes. If some bleeding occurs after removal of the bandage, apply pressure to the site and raise your arm for three to five minutes. If bruising or bleeding appears under the skin, apply a cold pack periodically to the bruised area during the first 24 hours, then warm, moist heat intermittently.
+If you have any questions concerning your donation or experience any unexpected problems, please call the center where you donated blood.</p>
+<br>
+<b><i>Give feedback</b></i><br>
+<button type="button">click here</button>
+</body>
+</html>
